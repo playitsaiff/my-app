@@ -1,42 +1,53 @@
 {
-  "name": "@gcs-ui-controls/react",
-  "version": "0.4.70",
-  "author": "Microsoft Corporation",
-  "description": "Library of reusable React components in GCS",
-  "license": "UNLICENSED",
-  "files": [
-    "lib*"
-  ],
-  "main": "lib-commonjs/index.js",
-  "module": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "name": "profile",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "@azure/msal-browser": "^2.32.1",
+    "@fluentui/react": "^8.90.2",
+    "@fluentui/react-hooks": "^8.6.9",
+    "@gcs-ui-controls/react": "^0.4.70",
+    "@gcs-ui-controls/translations": "^0.1.64",
+    "@microsoft/applicationinsights-react-js": "^3.2.4",
+    "@microsoftit/telemetry-extensions-npm": "^2.6.4",
+    "@reduxjs/toolkit": "^1.9.3",
+    "@types/file-saver": "^2.0.5",
+    "axios": "^0.26.1",
+    "axios-retry": "^3.2.4",
+    "env-cmd": "^10.1.0",
+    "file-saver": "^2.0.5",
+    "history": "^5.3.0",
+    "i18next": "^21.6.16",
+    "moment": "^2.29.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^11.16.6",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^5.2.0",
+    "redux-thunk": "^2.4.1",
+    "reselect": "^4.1.5",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.9.3"
+  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "yarn build:esm && yarn build:cjs",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir lib-commonjs",
+    "start": "webpack serve --hot --open --env isBuild=false --env isLocal=true",
+    "build": "webpack --config webpack.config.js  --env isBuild=true",
+    "ci:build:dev": "webpack --config webpack.config.js --env isBuild=true",
+    "ci:build:local": "webpack --config webpack.config.js  --env isBuild=true --env isLocal=true",
+    "ci:build:prod": "webpack --config webpack.config.js  --env isBuild=true --env isProd=true --env isLocal=false",
+    "ci:build:int": "webpack --config webpack.config.js --env isBuild=true --env isInteg=true",
+    "dev:codecoverage": "jest --collect-coverage",
+    "prepare": "cd .. && husky install apply/.husky",
     "test": "jest --no-cache -w 2",
-    "test:pipeline": "jest --no-cache -w 2 --silent --coverage",
+    "test:pipeline": "jest --no-cache -w 2 --coverage --silent",
     "dev:test": "jest --watch",
-    "eject": "react-scripts eject",
-    "storybook": "env-cmd -f env/.env.local yarn start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
     "lint": "eslint src/**/*.ts src/**/*.tsx"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      }
     ]
   },
   "browserslist": {
@@ -51,51 +62,59 @@
       "last 1 safari version"
     ]
   },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
+  "keywords": [],
+  "author": "",
   "devDependencies": {
-    "@fluentui/react": "^8.112.8",
-    "@microsoftit/telemetry-extensions-npm": "^3.0.0",
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/react-hooks": "^8.0.1",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.4.0",
-    "@types/node": "^16.11.19",
-    "@types/react": "^18.0.17",
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.6",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.4.0",
+    "@types/jest": "^27.4.2",
+    "@types/node": "^16.7.13",
+    "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
-    "@types/react-router-dom": "^5.3.3",
-    "@typescript-eslint/eslint-plugin": "^5.8.0",
-    "env-cmd": "^10.1.0",
-    "eslint": "^8.5.0",
-    "eslint-plugin-react": "^7.20.6",
-    "i18next": "^21.6.16",
+    "@types/react-router-dom": "5.1.5",
+    "@types/uuid": "^8.3.4",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "babel-jest": "^28.1.3",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "dotenv-webpack": "^8.0.0",
+    "eslint": "^8.28.0",
+    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-webpack-plugin": "^3.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
+    "jest": "^28.1.3",
+    "jest-environment-jsdom": "^28.1.3",
     "jest-junit-reporter": "^1.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-i18next": "^11.16.6",
-    "react-scripts": "5.0.0",
-    "ts-jest": "^27.1.4",
-    "typescript": "^4.5.4",
-    "web-vitals": "^2.1.3",
-    "webpack": "^5.66.0"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "dependencies": {
-    "@coherence-design-system/controls": "4.3.0",
-    "@fluentui/react-hooks": "^8.6.14",
-    "@gcs-ui-controls/translations": "^0.1.58",
-    "@m365-admin/collapsible": "^4.0.20",
-    "moment": "^2.29.3",
-    "pdfjs-dist": "^2.15.349",
-    "react-router-dom": "^5.2.0"
+    "lint-staged": "^12.3.7",
+    "mini-css-extract-plugin": "^2.6.1",
+    "prettier": "2.6.1",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "ts-jest": "^28.0.7",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.73.0",
+    "webpack-assets-manifest": "^5.1.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
   },
   "resolutions": {
-    "@babel/traverse": "^7.23.3",
-    "tough-cookie": "^4.1.3",
-    "word-wrap": "^1.2.5",
-    "semver": "^6.3.1",
-    "@adobe/css-tools": "^4.3.2"
+    "@coherence-design-system/controls": "4.3.0",
+    "@babel/traverse": "^7.23.2",
+    "@adobe/css-tools": "4.3.2",
+    "postcss": "8.4.31",
+    "tough-cookie": "4.1.3",
+    "word-wrap": "1.2.5"
   }
 }
