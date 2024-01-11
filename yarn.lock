@@ -3,9 +3,9 @@
 
 
 "@adobe/css-tools@^4.0.1", "@adobe/css-tools@^4.3.1":
-  version "4.3.1"
-  resolved "https://pkgs.dev.azure.com/MicrosoftIT/OneITVSO/_packaging/HR-GTA-GlobalTalentSourcing/npm/registry/@adobe/css-tools/-/css-tools-4.3.1.tgz#abfccb8ca78075a2b6187345c26243c1a0842f28"
-  integrity sha1-q/zLjKeAdaK2GHNFwmJDwaCELyg=
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/@adobe/css-tools/-/css-tools-4.3.2.tgz#a6abc715fb6884851fca9dad37fc34739a04fd11"
+  integrity sha512-DA5a1C0gD/pLOvhv33YMrbf2FK3oUzwNl9oOJqE4XVjuEtt6XIakRcsd7eLiOSPkp1kTRQGICTA8cKra/vFbjw==
 
 "@ampproject/remapping@^2.2.0":
   version "2.2.1"
@@ -4504,9 +4504,9 @@ flatted@^3.1.0:
   integrity sha1-YJ85IHy2FLidB2W0d8stQ3+/l4c=
 
 follow-redirects@^1.0.0, follow-redirects@^1.15.0:
-  version "1.15.2"
-  resolved "https://pkgs.dev.azure.com/MicrosoftIT/OneITVSO/_packaging/HR-GTA-GlobalTalentSourcing/npm/registry/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
-  integrity sha1-tGCGQUS6Y/JoEJbydMTlcCbaLBM=
+  version "1.15.4"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.4.tgz#cdc7d308bf6493126b17ea2191ea0ccf3e535adf"
+  integrity sha512-Cr4D/5wlrb0z9dgERpUL3LrmPKVDsETIJhaCMeDfuFYcqa5bldGV6wBsAN6X/vxlXQtFBMrXdXxdL8CbDTGniw==
 
 for-each@^0.3.3:
   version "0.3.3"
