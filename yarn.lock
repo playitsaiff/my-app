@@ -4460,15 +4460,10 @@ flatted@^3.1.0:
   resolved "https://pkgs.dev.azure.com/MicrosoftIT/OneITVSO/_packaging/HR-GTA-GlobalTalentSourcing/npm/registry/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
   integrity sha1-YJ85IHy2FLidB2W0d8stQ3+/l4c=
 
-follow-redirects@^1.0.0:
-  version "1.15.2"
-  resolved "https://pkgs.dev.azure.com/MicrosoftIT/OneITVSO/_packaging/HR-GTA-GlobalTalentSourcing/npm/registry/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
-  integrity sha1-tGCGQUS6Y/JoEJbydMTlcCbaLBM=
-
-follow-redirects@^1.14.8:
-  version "1.15.3"
-  resolved "https://pkgs.dev.azure.com/MicrosoftIT/OneITVSO/_packaging/HR-GTA-GlobalTalentSourcing/npm/registry/follow-redirects/-/follow-redirects-1.15.3.tgz#fe2f3ef2690afce7e82ed0b44db08165b207123a"
-  integrity sha1-/i8+8mkK/OfoLtC0TbCBZbIHEjo=
+follow-redirects@^1.0.0, follow-redirects@^1.14.8:
+  version "1.15.5"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.5.tgz#54d4d6d062c0fa7d9d17feb008461550e3ba8020"
+  integrity sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==
 
 for-each@^0.3.3:
   version "0.3.3"
