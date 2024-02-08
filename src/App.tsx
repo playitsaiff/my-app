@@ -7,7 +7,7 @@ import { initializeIcons } from "@fluentui/react";
 initializeIcons();
 function App() {
   useEffect(() => {
-    console.log("asdf");
+    console.log("asdfg");
   });
   return (
     <div className="App">
