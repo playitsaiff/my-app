@@ -8544,3 +8544,4 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://pkgs.dev.azure.com/MicrosoftIT/OneITVSO/_packaging/HR-GTA-GlobalTalentSourcing/npm/registry/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha1-ApTrPe4FAo0x7hpfosVWpqrxChs=
+
