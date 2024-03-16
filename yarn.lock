@@ -4575,9 +4575,9 @@ flatted@^3.1.0:
   integrity sha1-YJ85IHy2FLidB2W0d8stQ3+/l4c=
 
 follow-redirects@^1.0.0, follow-redirects@^1.15.0, follow-redirects@^1.15.5:
-  version "1.15.5"
-  resolved "https://pkgs.dev.azure.com/MicrosoftIT/OneITVSO/_packaging/HR-GTA-GlobalTalentSourcing/npm/registry/follow-redirects/-/follow-redirects-1.15.5.tgz#54d4d6d062c0fa7d9d17feb008461550e3ba8020"
-  integrity sha1-VNTW0GLA+n2dF/6wCEYVUOO6gCA=
+  version "1.15.6"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.6.tgz#7f815c0cda4249c74ff09e95ef97c23b5fd0399b"
+  integrity sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==
 
 for-each@^0.3.3:
   version "0.3.3"
@@ -8544,4 +8544,3 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://pkgs.dev.azure.com/MicrosoftIT/OneITVSO/_packaging/HR-GTA-GlobalTalentSourcing/npm/registry/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha1-ApTrPe4FAo0x7hpfosVWpqrxChs=
-
