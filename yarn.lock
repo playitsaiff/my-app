@@ -3543,13 +3543,14 @@ axios-retry@^3.1.9:
     "@babel/runtime" "^7.15.4"
     is-retry-allowed "^2.2.0"
 
-axios@^0.27.2:
-  version "0.27.2"
-  resolved "https://pkgs.dev.azure.com/MicrosoftIT/OneITVSO/_packaging/HR-GTA-GlobalTalentSourcing/npm/registry/axios/-/axios-0.27.2.tgz#207658cc8621606e586c85db4b41a750e756d972"
-  integrity sha1-IHZYzIYhYG5YbIXbS0GnUOdW2XI=
+axios@^1.6.7:
+  version "1.6.7"
+  resolved "https://pkgs.dev.azure.com/MicrosoftIT/OneITVSO/_packaging/HR-GTA-GlobalTalentSourcing/npm/registry/axios/-/axios-1.6.7.tgz#7b48c2e27c96f9c68a2f8f31e2ab19f59b06b0a7"
+  integrity sha1-e0jC4nyW+caKL48x4qsZ9ZsGsKc=
   dependencies:
-    follow-redirects "^1.14.9"
+    follow-redirects "^1.15.4"
     form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
 
 axobject-query@^3.2.1:
   version "3.2.1"
@@ -5651,7 +5652,7 @@ flatted@^3.2.9:
   resolved "https://pkgs.dev.azure.com/MicrosoftIT/OneITVSO/_packaging/HR-GTA-GlobalTalentSourcing/npm/registry/flatted/-/flatted-3.3.1.tgz#21db470729a6734d4997002f439cb308987f567a"
   integrity sha1-IdtHBymmc01JlwAvQ5yzCJh/Vno=
 
-follow-redirects@^1.0.0, follow-redirects@^1.14.9, follow-redirects@^1.15.6:
+follow-redirects@^1.0.0, follow-redirects@^1.15.4, follow-redirects@^1.15.6:
   version "1.15.6"
   resolved "https://pkgs.dev.azure.com/MicrosoftIT/OneITVSO/_packaging/HR-GTA-GlobalTalentSourcing/npm/registry/follow-redirects/-/follow-redirects-1.15.6.tgz#7f815c0cda4249c74ff09e95ef97c23b5fd0399b"
   integrity sha1-f4FcDNpCScdP8J6V75fCO1/QOZs=
@@ -9186,6 +9187,11 @@ proxy-addr@~2.0.7:
   dependencies:
     forwarded "0.2.0"
     ipaddr.js "1.9.1"
+
+proxy-from-env@^1.1.0:
+  version "1.1.0"
+  resolved "https://pkgs.dev.azure.com/MicrosoftIT/OneITVSO/_packaging/HR-GTA-GlobalTalentSourcing/npm/registry/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
+  integrity sha1-4QLxbKNVQkhldV0sno6k8k1Yw+I=
 
 psl@^1.1.33:
   version "1.9.0"
